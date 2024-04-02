@@ -1,14 +1,30 @@
-<reference types="cypress-xpath" />
-class OpenAccountpage{
-    openaccountbutton(){
-        return cy.xpath('//button[@ng-click="openAccount()"]')
+class OpenAccount{
+    OpenAccountPage(){
+        return cy.xpath('//button[@ng-class="btnClass2"]')
+    }
+    SelectCusumerName(){
+        return cy.xpath('//select[@id="userSelect"]')
+    }
+    CurrencyButton(){
+        return cy.xpath('//select[@id="currency"]')
+    }
+    ProccessButton(){
+        return cy.xpath('//button[@type="submit"]')
     }
 }
-const data= new OpenAccountpage()
-//create costamcommand on OpenAccount in button
-Cypress.Commands.add("AccountPage",()=>{
-    data.openaccountbutton().should('be.visible')
-    data.openaccountbutton().click()
-
-
+const OpenAccountPage = new OpenAccount
+Cypress.Commands.add("OpenAccountButton",()=>{
+    //click on the open page button
+    OpenAccountPage.OpenAccountPage().should("be.visible")
+    OpenAccountPage.OpenAccountPage().click()
 })
+Cypress.Commands.add("SelectCustomerName",(data)=>{
+    //select the customer name
+    //OpenAccountPage.SelectCusumerName().select(data)
+})
+Cypress.Commands.add("ClickProccesButton",()=>{
+    //click to proccess button
+    OpenAccountPage.ProccessButton().click()
+})
+
+export default OpenAccount

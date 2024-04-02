@@ -21,7 +21,10 @@
 //import './PageObjects/commands'
 import 'cypress-mochawesome-reporter/register';
 import '../support/PageObjects/BankManagerPageObjects.cy'
-import'../support/PageObjects/Addcustomer.cy'
+import'../support/PageObjects/addcustomerpageobjects.cy'
+import'../support/PageObjects/CustomerPageOjects.cy'
+import'../support/PageObjects/HomeButtonPageObjects.cy'
+import'../support/PageObjects/OpenAccount.cy'
 
 // import managerPageObjects from '../support/BankManagerPageObjects.cy'
 //import managersPageObjects from '../support/PageObjects/BankManagerPageObjects.cy'

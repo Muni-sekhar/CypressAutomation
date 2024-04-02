@@ -14,13 +14,47 @@ describe("xyz bank suite", function() {
     })
 
 
-    it("Click on login button",()=>{
+    it.only("Click on Maneger login button",function(){
+        //click on the manager button
         cy.ClickOnManagerLoginButton()
-        cy.AddCustomerLogIn()
-        cy.CustomerDetails()
-        cy.AccountPage()
+        //click on the costmeralogin button
+        cy.AddCustomerLogIn() 
+        //fill the cutomer details
+        cy.CustomerDetails(this.data.Fname,this.data.Lname,this.data.Pcode)
+        //enter to click on the customer page button
+        cy.ClickOnCustomerPageButton()
+        //open to Openaccount button
+        cy.OpenAccountButton()
+        //select the name &currency 
+        cy.SelectCustomerName(this.data.Name)
+       // cy.SelectCurrency(this.data.Currency)
+        //click on the procces button 
+        cy.ClickProccesButton()
+        //enter to click on the customer button
+        cy.ClickOnCustomerButton()
+        //check the name in the list of custmer details
+        cy.NameChecking()
+        //return back to click on home button
+        cy.ClickOnHomePageButton()
     })
-   // it("Open Account Page",()=>{
-        cy.OpenAccount()
+    it("Click On Customer Button",function(){
+        cy.visit(this.data.LoginUrl)
+        cy.AddCustomerLogIn() 
+        cy.CustomerDetails(this.data.Fname,this.data.Lname,this.data.Pcode)
+        cy.ClickOnCustomerPageButton()
+
     })
-//})
+    it("Open Customer Account",function(){
+        cy.visit(this.data.OpenAccountUrl)
+        cy.OpenAccountButton()
+        cy.SelectCustomerName(this.data.Name)
+        cy.SelectCurrency(this.data.Currency)
+        cy.ClickProccesButton()
+    })
+    it("Open Cusstomer Details",function(){
+        cy.visit(this.data.customerdetalsurl)
+        cy.ClickOnCustomerButton()
+        cy.NameChecking()
+        cy.ClickOnHomePageButton()
+    })
+})
