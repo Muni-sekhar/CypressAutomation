@@ -2,17 +2,26 @@ class CustomerPage{
     CustomersButton(){
         return cy.xpath('//button[@ng-class="btnClass3"]')
     }
-    TableBody(){
-        return cy.get('tbody')
+
+    customerName(){
+        return cy.xpath('//tbody/tr[6]/td[1]')
     }
+   
 }
 const CustomerView = new CustomerPage
-Cypress.Commands.add("ClickOnCustomerButton",()=>{
+Cypress.Commands.add("verifyCustomerOnCustomerPage",()=>{
     //click on Customer Button
     CustomerView.CustomersButton().click()
+    //Verify customers page url
+    cy.url().should('include','/list')
+
+    //Verify customer name
+    CustomerView.customerName().then((cName)=>{
+        const custmerFname=cName.text()
+        cy.log(custmerFname)
+        expect('Muni').to.equal(custmerFname)
+    })
+
 })
-Cypress.Commands.add("NameChecking",()=>{
-    //visible on the name on custmer detals page
-    CustomerView.TableBody().should("be.visible")
-})
+
 export default CustomerPage

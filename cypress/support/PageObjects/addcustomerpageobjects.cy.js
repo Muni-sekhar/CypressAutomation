@@ -1,36 +1,40 @@
 class addcustomerpage {
     addcustomerbutton(){
-        return cy.xpath('//button[@ng-class="btnClass1"]')
+        return cy.xpath('//button[@ng-click="addCust()"]')
     }
-    CostomerFirstName(){
+    customerFirstName(){
         return cy.xpath('//input[@ng-model="fName"]')
     }
-    CostomerLastName(){
+    customerLastName(){
         return cy.xpath('//input[@ng-model="lName"]')
     }
-    CostomerPcode(){
+    customerPostcode(){
         return cy.xpath('//input[@ng-model="postCd"]')
     }
-    AddButton(){
+    customerAddButton(){
         return cy.xpath('//button[@type="submit"]')
     }
 
 }
-const Costomerpage = new addcustomerpage
-Cypress.Commands.add("AddCustomerLogIn",()=>{
+const customerPage = new addcustomerpage
+
+Cypress.Commands.add("ClickOnAddCustomerButton",()=>{
     //click on the customerbutton to add detals
-    Costomerpage.addcustomerbutton().should("be.visible")
-    Costomerpage.addcustomerbutton().click()
+    customerPage.addcustomerbutton().should("be.visible")
+    cy.wait(2000)
+    customerPage.addcustomerbutton().click({force:true})
+    //verify add customer page URL 
+    cy.url().should('include','/addCust')
 })
-Cypress.Commands.add("CustomerDetails",(Fname,Lname,Pcode)=>{
+Cypress.Commands.add("EnterCustomerDetails",(Fname,Lname,Pcode)=>{
     //enter the customer detalis
-    Costomerpage.CostomerFirstName().should("be.visible")
-    Costomerpage.CostomerFirstName().type(Fname)
-    Costomerpage.CostomerLastName().type(Lname)
-    Costomerpage.CostomerPcode().type(Pcode)
+    customerPage.addcustomerbutton().should("be.visible")
+    customerPage.customerFirstName().type(Fname)
+    customerPage.customerLastName().type(Lname)
+    customerPage.customerPostcode().type(Pcode)
 })
-Cypress.Commands.add("ClickOnCustomerPageButton",()=>{
+Cypress.Commands.add("ClickOnCustomerButton",()=>{
     //click on the add button 
-    Costomerpage.AddButton().click()
+    customerPage.customerAddButton().click()
 })
 export default addcustomerpage

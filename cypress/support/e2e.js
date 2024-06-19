@@ -20,11 +20,14 @@
 // Import commands.js using ES2015 syntax:
 //import './PageObjects/commands'
 import 'cypress-mochawesome-reporter/register';
-import '../support/PageObjects/BankManagerPageObjects.cy'
-import'../support/PageObjects/addcustomerpageobjects.cy'
-import'../support/PageObjects/CustomerPageOjects.cy'
-import'../support/PageObjects/HomeButtonPageObjects.cy'
-import'../support/PageObjects/OpenAccount.cy'
+
+import '../support/PageObjects/addCustomerPageObjects.cy'
+import '../support/PageObjects/bankManagerPageObjects.cy'
+import '../support/PageObjects/openAccountPageObjects.cy'
+import '../support/PageObjects/customerPageOjects.cy'
+import '../support/PageObjects/homePageObjects.cy'
+
+
 
 // import managerPageObjects from '../support/BankManagerPageObjects.cy'
 //import managersPageObjects from '../support/PageObjects/BankManagerPageObjects.cy'

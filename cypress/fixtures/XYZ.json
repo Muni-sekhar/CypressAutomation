@@ -2,11 +2,11 @@
     "url":"https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login",
     "Fname":"Muni",
     "Lname":"Sekhar",
-    "Name":"Muni sekhar",
+    "Name":"Test user",
     "Pcode":"524121",
     "LoginUrl":"https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/addCust",
     "OpenAccountUrl":"https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/openAccount",
-    "Currency":"Dollar",
+    "Currency":"Rupee",
     "customerdetalsurl":"https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/list"
     
     
