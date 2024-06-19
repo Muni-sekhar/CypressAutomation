@@ -38,6 +38,26 @@ describe("xyz bank suite", function() {
          cy.navigateBackToHomePage()
     })   
 
+   it("Customer Login Page",function(){
+   //Verify Customer Login Page
+   cy.LoginPage()
+   //Select CustomerName from the dropdown
+   cy.selectCustomerFromDropDown(3)
+   //Click on login button
+   cy.ClickOnLoginButton()
+   // Click on Deposit Button
+   cy.ClickOnDepositButton()
+   // Enter the Amount
+   cy.AddDepositAmount(20000)
+   //Click On Transctions Button
+   cy.ClickOnTransctionButton(1)
+   //Click On WithDrawl Button
+   cy.ClickOnWithdralButton(10000)
+   //Click on Log Out Button
+   cy.ClickLogOutButton()
+   //Back to Home Page
+   cy.BackToHomePage()
 
+   })
     
 })

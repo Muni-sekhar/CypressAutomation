@@ -26,7 +26,9 @@ import '../support/PageObjects/bankManagerPageObjects.cy'
 import '../support/PageObjects/openAccountPageObjects.cy'
 import '../support/PageObjects/customerPageOjects.cy'
 import '../support/PageObjects/homePageObjects.cy'
+import '../support/PageObjects/customerLoginPageObjects.cy'
 
+import '../support/PageObjects/userAccountLoginPageObjects.cy'
 
 
 // import managerPageObjects from '../support/BankManagerPageObjects.cy'
