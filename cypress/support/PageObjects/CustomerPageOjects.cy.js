@@ -4,7 +4,7 @@ class CustomerPage{
     }
 
     customerName(){
-        return cy.xpath('//tbody/tr[6]/td[1]')
+        return cy.xpath('//tbody/tr[2]/td[1]')
     }
    
 }
@@ -19,7 +19,7 @@ Cypress.Commands.add("verifyCustomerOnCustomerPage",()=>{
     CustomerView.customerName().then((cName)=>{
         const custmerFname=cName.text()
         cy.log(custmerFname)
-        expect('Muni').to.equal(custmerFname)
+        expect('Harry').to.equal(custmerFname)
     })
 
 })

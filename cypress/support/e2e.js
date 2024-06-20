@@ -20,6 +20,7 @@
 // Import commands.js using ES2015 syntax:
 //import './PageObjects/commands'
 import 'cypress-mochawesome-reporter/register';
+import '@shelex/cypress-allure-plugin';
 
 import '../support/PageObjects/addCustomerPageObjects.cy'
 import '../support/PageObjects/bankManagerPageObjects.cy'
@@ -27,7 +28,6 @@ import '../support/PageObjects/openAccountPageObjects.cy'
 import '../support/PageObjects/customerPageOjects.cy'
 import '../support/PageObjects/homePageObjects.cy'
 import '../support/PageObjects/customerLoginPageObjects.cy'
-
 import '../support/PageObjects/userAccountLoginPageObjects.cy'
 
 

@@ -1,6 +1,6 @@
 //import managerPageObjects from './support/BankManagerPageObjects'
 
-describe("xyz bank suite", function() {
+describe("XYZ BankProject Suite", function() {
 
     beforeEach(function () {
         //set viewport size
@@ -9,7 +9,7 @@ describe("xyz bank suite", function() {
         cy.fixture('XYZ').then((test) => {
             this.data = test
             //launch the website
-           // cy.LogInWebsite(this.data.url)
+           //cy.LogInWebsite(this.data.url)
            cy.visit('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login')
         })
     })
