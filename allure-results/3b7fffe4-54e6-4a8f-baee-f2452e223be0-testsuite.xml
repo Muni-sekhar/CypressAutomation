@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1718891697462' stop='1718891724072'>
+    <name>XYZ BankProject Suite</name>
+    <title>XYZ BankProject Suite</title>
+    <test-cases>
+        <test-case start='1718891697463' status='passed' stop='1718891712962'>
+            <name>Add a new customer as a bank manager</name>
+            <title>Add a new customer as a bank manager</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1718891713007' status='passed' stop='1718891724068'>
+            <name>Customer Login Page</name>
+            <title>Customer Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
